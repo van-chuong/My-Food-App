@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_sc"
+    tools:context=".activity.OrderDetailActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+            app:backgroundTint="@color/white"
+            app:fabSize="mini"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/purple_700" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="Order Detail"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back_btn" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="Delivery Information"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/deli_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:background="@android:color/transparent"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView32"
+            app:layout_constraintWidth_percent=".95"
+            app:startIconDrawable="@drawable/ic_baseline_person_outline_24"
+            app:startIconTint="@color/blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10sp"
+                android:textColor="@color/black"
+                android:enabled="false"
+                android:hint="Recipient Name"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/deli_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:background="@android:color/transparent"
+
+            app:boxBackgroundColor="@android:color/transparent"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deli_name"
+            app:layout_constraintWidth_percent=".95"
+            app:startIconDrawable="@drawable/ic_outline_phone_24"
+            app:startIconTint="@color/green">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10sp"
+                android:textColor="@color/black"
+                android:enabled="false"
+                android:hint="Phone Number"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/deli_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:background="@android:color/transparent"
+
+            app:boxBackgroundColor="@android:color/transparent"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deli_phone"
+            app:layout_constraintWidth_percent=".95"
+            app:startIconDrawable="@drawable/ic_outline_location_on_24"
+            app:startIconTint="@color/purple_700">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10sp"
+                android:enabled="false"
+                android:textColor="@color/black"
+                android:hint="Address"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="Product Details Of The Order"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deli_address" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/product_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="Status"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_rv" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView34">
+            <RadioGroup
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radio_pending"
+                        android:layout_width="150sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:textAlignment="center"
+                        android:background="@drawable/radio_selector"
+                        android:button="@android:color/transparent"
+                        android:elevation="4sp"
+                        android:padding="16sp"
+                        android:text="Pending"
+                        android:enabled="false"
+                        android:textColor="@drawable/radio_text_color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RadioButton
+                        android:id="@+id/radio_delivery"
+                        android:layout_width="150sp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/radio_selector"
+                        android:button="@android:color/transparent"
+                        android:elevation="4sp"
+                        android:padding="16sp"
+                        android:enabled="false"
+                        android:text="Being delivery"
+                        android:textColor="@drawable/radio_text_color"
+                        app:layout_constraintBottom_toBottomOf="@+id/radio_pending"
+                        app:layout_constraintStart_toEndOf="@+id/radio_pending"
+                        app:layout_constraintTop_toTopOf="@+id/radio_pending" />
+
+                    <RadioButton
+                        android:id="@+id/radio_completed"
+                        android:layout_width="150sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:textAlignment="center"
+                        android:background="@drawable/radio_selector"
+                        android:button="@android:color/transparent"
+                        android:elevation="4sp"
+                        android:padding="16sp"
+                        android:enabled="false"
+                        android:text="Completed"
+                        android:textColor="@drawable/radio_text_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/radio_pending" />
+
+                    <RadioButton
+                        android:id="@+id/radio_canceled"
+                        android:layout_width="150sp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:textAlignment="center"
+                        android:enabled="false"
+                        android:background="@drawable/radio_selector"
+                        android:button="@android:color/transparent"
+                        android:elevation="4sp"
+                        android:padding="16sp"
+                        android:text="Canceled"
+                        android:textColor="@drawable/radio_text_color"
+                        app:layout_constraintBottom_toBottomOf="@+id/radio_completed"
+                        app:layout_constraintStart_toEndOf="@+id/radio_completed"
+                        app:layout_constraintTop_toTopOf="@+id/radio_completed" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/canceled_order_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:padding="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:text="Request Canceled Order"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear"
+            app:layout_constraintWidth_percent=".95" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

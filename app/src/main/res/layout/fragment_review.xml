@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ReviewFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:progressBackgroundTint="@color/gray_sc"
+                android:progressTint="@color/purple_500"
+                android:rating="5"
+                android:stepSize="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/submit_review"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="@color/gray_sc"
+                app:boxBackgroundColor="@color/gray_sc"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+                app:layout_constraintWidth_percent=".96">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Your Review"
+                    android:lines="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/submit_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_marginEnd="10sp"
+                android:text="Submit Your Review"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_marginTop="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/gray_sc"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                app:layout_constraintWidth_percent=".96" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="360sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comment">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent=".5">
+
+                <TextView
+                    android:id="@+id/review5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginTop="56dp"
+                    android:fontFamily="@font/open_sans_condensed_bold"
+                    android:text="36 reviews"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar2"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressBackgroundTint="#FFFFFF"
+                    android:progressTint="@color/purple_500"
+                    android:rating="5"
+                    android:stepSize="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/review5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar3"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_marginTop="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressBackgroundTint="#FFFFFF"
+                    android:progressTint="@color/purple_500"
+                    android:rating="4"
+                    android:stepSize="0.5"
+                    app:layout_constraintBottom_toBottomOf="@+id/review4"
+                    app:layout_constraintStart_toEndOf="@+id/review4"
+                    app:layout_constraintTop_toBottomOf="@+id/review5" />
+
+                <TextView
+                    android:id="@+id/review4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:fontFamily="@font/open_sans_condensed_bold"
+                    android:text="36 reviews"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/review5" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar4"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="10sp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressBackgroundTint="#FFFFFF"
+                    android:progressTint="@color/purple_500"
+                    android:rating="3"
+                    android:stepSize="0.5"
+                    app:layout_constraintBottom_toBottomOf="@+id/review3"
+                    app:layout_constraintStart_toEndOf="@+id/review3"
+                    app:layout_constraintTop_toBottomOf="@+id/ratingBar3" />
+
+                <TextView
+                    android:id="@+id/review3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:fontFamily="@font/open_sans_condensed_bold"
+                    android:text="36 reviews"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/review4" />
+
+                <RatingBar
+                    android:id="@+id/ratingBar5"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="10sp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressBackgroundTint="#FFFFFF"
+                    android:progressTint="@color/purple_500"
+                    android:rating="2"
+                    android:stepSize="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/review3"
+                    app:layout_constraintTop_toBottomOf="@+id/review3" />
+
+                <TextView
+                    android:id="@+id/review2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:fontFamily="@font/open_sans_condensed_bold"
+                    android:text="36 reviews"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/review3" />
+
+                <RatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="12sp"
+                    android:isIndicator="true"
+                    android:numStars="1"
+                    android:progressBackgroundTint="#FFFFFF"
+                    android:progressTint="@color/purple_500"
+                    android:rating="3"
+                    android:stepSize="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/review1"
+                    app:layout_constraintTop_toBottomOf="@+id/review2" />
+
+                <TextView
+                    android:id="@+id/review1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/open_sans_condensed_bold"
+                    android:text="36 reviews"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/review2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/ratingTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25sp"
+                android:fontFamily="@font/open_sans_condensed_bold"
+                android:text="4.0"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RatingBar
+                android:id="@+id/ratingBar1"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressBackgroundTint="#FFFFFF"
+                android:progressTint="@color/purple_500"
+                android:rating="5"
+                android:stepSize="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingTotal"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/total_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:fontFamily="@font/open_sans_condensed_bold"
+                android:text="Base on 23 reviews"
+                android:textSize="18sp"
+                android:textColor="@color/gray"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ratingBar1" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_marginTop="5sp"
+                android:background="@color/gray_sc"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintWidth_percent=".96" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/comment_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

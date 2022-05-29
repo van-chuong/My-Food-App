@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mediumGray"
+    tools:context=".activity.DetailDailyMealActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="240sp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?android:attr/colorPrimary"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:expandedTitleTextColor="@color/white"
+            app:collapsedTitleTextColor="@color/white"
+            app:title="Daily Meals"
+            >
+            <ImageView
+                android:id="@+id/daily_meal_img"
+                android:foreground="@drawable/detail_daily_meal_bg"
+                android:layout_width="match_parent"
+                android:layout_height="240sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/breakfast"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+                android:baselineAlignBottom="false"
+                android:layout_margin="10sp"
+                app:fabSize="mini"
+                app:layout_anchorGravity = "end|bottom"
+                app:layout_anchor="@id/app_bar"
+                app:backgroundTint="#f3f3f4"
+                app:tint="@color/purple_700"
+                android:clickable="true"
+                android:focusable="true" />
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:titleTextColor="@color/white"
+                />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20sp"
+            android:background="@drawable/daily_detail_bg"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/detail_daily_mealRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_shopping_cart_24"
+        android:baselineAlignBottom="false"
+        app:fabSize="normal"
+        app:layout_anchorGravity = "end|bottom"
+        app:layout_anchor="@id/app_bar"
+        app:backgroundTint="#f3f3f4"
+        app:tint="@color/purple_700"
+        android:clickable="true"
+        android:focusable="true" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

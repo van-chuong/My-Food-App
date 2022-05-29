@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_sc"
+    tools:context=".activity.SearchProductActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+            app:backgroundTint="@color/white"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/input_search"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/input_search"
+            app:tint="@color/purple_700" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            app:boxBackgroundColor="@android:color/transparent"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            android:layout_margin="10sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:boxCornerRadiusTopEnd="10sp"
+            app:boxCornerRadiusBottomEnd="10sp"
+            app:boxCornerRadiusBottomStart="10sp"
+            app:boxCornerRadiusTopStart="10sp"
+            app:layout_constraintWidth_percent=".8">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:drawablePadding="10sp"
+                android:hint="Search your favourite food" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_marginStart="10sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="Search Result"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_search" />
+
+        <TextView
+            android:id="@+id/count_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:visibility="gone"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="There were 15 results found"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/search_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/count_result" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

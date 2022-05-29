@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray_sc"
+    tools:context=".ui.usermanagement.UserManagementFragment">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="200sp"
+            android:layout_height="110sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            app:cardBackgroundColor="@color/blue"
+            app:cardCornerRadius="20sp"
+            app:cardElevation="5sp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/card_user">
+
+                <TextView
+                    android:id="@+id/user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:fontFamily="@font/open_sans_condensed_bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:fontFamily="@font/open_sans_condensed_bold"
+                    android:text="Total Of Users"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="200sp"
+            android:layout_height="110sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="20sp"
+            app:cardBackgroundColor="@color/greennew"
+            app:cardCornerRadius="20sp"
+            app:cardElevation="5sp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/card_new_user">
+
+                <TextView
+                    android:id="@+id/new_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:fontFamily="@font/open_sans_condensed_bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20sp"
+                    android:fontFamily="@font/open_sans_condensed_bold"
+                    android:text="New Users"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="Users List"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/manager_userRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/constraintLayout"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="15sp" />
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="5sp"
+    app:cardElevation="1sp"
+    app:cardCornerRadius="20sp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/product_img"
+            android:layout_width="130sp"
+            android:layout_height="110sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginStart="10sp"
+            android:src="@drawable/coffe"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="24sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="4sp">
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:fontFamily="@font/amarante"
+                android:layout_marginTop="10sp"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:singleLine="true"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/product_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10sp"
+                android:ellipsize="end"
+                android:text="Decription "
+                android:fontFamily="@font/amarante"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:lines="1"
+                android:singleLine="true"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/im"
+                    android:layout_width="14dp"
+                    android:layout_height="15sp"
+                    android:src="@drawable/ic_baseline_monetization_on_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/product_price"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/product_price"
+                    app:tint="@color/purple_500" />
+                <TextView
+                    android:id="@+id/product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$40"
+                    android:layout_marginStart="4sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/im"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/add_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_add_circle_outline_24"
+                    app:backgroundTint="#f3f3f4"
+                    app:fabSize="mini"
+                    android:layout_marginEnd="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/purple_700" />
+
+                <TextView
+                    android:id="@+id/product_qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:text="6"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/add_btn"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/minus_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10sp"
+                    android:src="@drawable/ic_baseline_remove_circle_outline_24"
+                    app:backgroundTint="#f3f3f4"
+                    app:fabSize="mini"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/product_qty"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/purple_700" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

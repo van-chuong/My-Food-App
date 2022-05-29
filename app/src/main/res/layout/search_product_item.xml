@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10sp"
+    app:cardCornerRadius="10sp"
+    app:cardElevation="0sp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/pro_img"
+            android:layout_width="90sp"
+            android:layout_height="90sp"
+            android:src="@drawable/man"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_border_color="@color/gray_sc"
+            app:riv_corner_radius="10sp" />
+
+        <TextView
+            android:id="@+id/pro_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="Product Name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/pro_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pro_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="$15,0"
+            android:textStyle="bold"
+            android:textColor="@color/purple_700"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/pro_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pro_name" />
+
+        <TextView
+            android:id="@+id/pro_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:layout_marginStart="10sp"
+            android:text="type"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/pro_img"
+            app:layout_constraintTop_toBottomOf="@+id/pro_name" />
+
+        <TextView
+            android:id="@+id/pro_sales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sales : 5"
+            android:layout_marginStart="10sp"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pro_img"
+            app:layout_constraintTop_toBottomOf="@+id/pro_type" />
+
+        <TextView
+            android:id="@+id/pro_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:text="10:00 - 23:00"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/pro_sales"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pro_type" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

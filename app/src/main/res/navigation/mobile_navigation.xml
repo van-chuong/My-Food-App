@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.foodapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_favourite"
+        android:name="com.example.foodapp.ui.favourite.FavouriteFragment"
+        android:label="Favourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/nav_daily_meal"
+        android:name="com.example.foodapp.ui.dailymeal.DailyMealFragment"
+        android:label="Daily Meals"
+        tools:layout="@layout/fragment_daily_meal" />
+    <fragment
+        android:id="@+id/nav_mycart"
+        android:label="My Cart"
+        android:name="com.example.foodapp.ui.mycart.MyCartFragment"
+        tools:layout="@layout/fragment_my_cart"/>
+    <fragment
+        android:id="@+id/nav_manager_categories"
+        android:label="Catalog Management"
+        android:name="com.example.foodapp.ui.categorymanagement.CategoryManagementFragment"
+        tools:layout="@layout/fragment_category_management"/>
+<!--    <fragment-->
+<!--        android:id="@+id/nav_manager_daily_meal"-->
+<!--        android:label="Daily Meal Management"-->
+<!--        android:name="com.example.foodapp.ui.dailymealmanagement.DailyMealManagementFragment"-->
+<!--        tools:layout="@layout/fragment_daily_meal_management"/>-->
+    <fragment
+        android:id="@+id/nav_manager_product"
+        android:label="Product Management"
+        android:name="com.example.foodapp.ui.productmanagement.ProductManagementFragment"
+        tools:layout="@layout/fragment_product_management"/>
+    <fragment
+        android:id="@+id/nav_manager_order"
+        android:label="Order Management"
+        android:name="com.example.foodapp.ui.ordermanagement.OrderManagementFragment"
+        tools:layout="@layout/fragment_order_management"/>
+    <fragment
+        android:id="@+id/nav_manager_user"
+        android:label="User Management"
+        android:name="com.example.foodapp.ui.usermanagement.UserManagementFragment"
+        tools:layout="@layout/fragment_user_management"/>
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:label="Dashboard"
+        android:name="com.example.foodapp.ui.dashboard.DashboardFragment"
+        tools:layout="@layout/fragment_dashboard"/>
+    <fragment
+        android:id="@+id/nav_manager_review"
+        android:label="Review Management"
+        android:name="com.example.foodapp.ui.reviewmanagement.ReviewManagementFragment"
+        tools:layout="@layout/fragment_dashboard"/>
+</navigation>

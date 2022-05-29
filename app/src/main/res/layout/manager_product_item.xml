@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10sp"
+    app:cardCornerRadius="20sp"
+    app:cardElevation="0sp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/product_img"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="20sp" />
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_margin="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Hambuger"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/product_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24"
+            app:backgroundTint="@color/white"
+            app:fabSize="mini"
+            app:fabCustomSize="30sp"
+            app:maxImageSize="20sp"
+            app:elevation="0sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/red" />
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="$16.0"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/product_timing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/product_timing" />
+
+        <TextView
+            android:id="@+id/product_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="5sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="10:00 - 23:00"
+            android:textAllCaps="true"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/product_img"
+            app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+        <TextView
+            android:id="@+id/product_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="Sales : 6"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/product_img"
+            app:layout_constraintTop_toBottomOf="@+id/product_timing" />
+
+        <TextView
+            android:id="@+id/product_qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="In stock : 6"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/product_sale"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/product_sale" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

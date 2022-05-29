@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10sp"
+    app:cardCornerRadius="20sp"
+    app:cardElevation="0sp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp">
+
+        <TextView
+            android:id="@+id/order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="Van Chuong"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24"
+            app:backgroundTint="@color/white"
+            app:elevation="0sp"
+            app:fabSize="mini"
+            app:fabCustomSize="30sp"
+            app:maxImageSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/red" />
+
+        <TextView
+            android:id="@+id/order_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="Total : $16.0"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/order_status"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/order_status" />
+
+        <TextView
+            android:id="@+id/order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="5sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:text="Pending"
+            android:textAllCaps="true"
+            android:textColor="@color/yellow"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/order_name" />
+
+        <TextView
+            android:id="@+id/order_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:lines="1"
+            android:maxLines="1"
+            android:layout_marginBottom="10sp"
+            android:text="45 Tran Dai Nghia ,Ngu Hanh Son, Da Nang"
+            android:textColor="@color/gray"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/order_status" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
