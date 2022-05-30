@@ -93,7 +93,7 @@ class LoginActivity : AppCompatActivity() {
         }
         //Configure Google sign in
         gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("359396340409-6nd2tpcvocojp2l4ismpifluq2thef86.apps.googleusercontent.com")
+            .requestIdToken("")
             .requestEmail()
             .build()
         googleSignInClient = GoogleSignIn.getClient(this,gso)
