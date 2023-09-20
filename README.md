@@ -28,18 +28,14 @@ The food ordering application is a mobile application developed with Kotlin that
 - :toolbox: Android Jetpack - A set of tools to support Android development.
 - :fire: Firebase - Used Firebase for user management, data storage, and user authentication.
 
-## Installation
+## Screenshots
 
-To install the app on your mobile device, you can follow these steps:
+| Screenshot 1                | Screenshot 2                | Screenshot 3                | Screenshot 4                |
+| ----------------------------| ----------------------------| ----------------------------| ----------------------------|
+| ![Screenshot 1](images/app_screenshot1.png) | ![Screenshot 2](images/app_screenshot2.png) | ![Screenshot 4](images/app_screenshot4.png) | ![Screenshot 5](images/app_screenshot5.png) |
 
-1. **Clone the Repository**:
-   - Clone this repository using the following command:
-     ```
-     git clone https://github.com/van-chuong/My-Food-App
-     ```
 
-2. **Open the Project**:
-   - Open the project using Android Studio or any other Kotlin compiler.
+| Screenshot 5                | Screenshot 6                | Screenshot 7                | Screenshot 8               |
+| ----------------------------| ----------------------------| ----------------------------| ----------------------------|
+| ![Screenshot 6](images/app_screenshot6.png) | ![Screenshot 7](images/app_screenshot7.png) | ![Screenshot 8](images/app_screenshot8.png) | ![Screenshot 10](images/app_screenshot11.png) |
 
-3. **Run the App**:
-   - Run the app on an emulator or your physical mobile device.
