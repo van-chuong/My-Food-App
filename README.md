@@ -1,5 +1,4 @@
 # My Food App
-![App Screenshot](images/app_screenshot1.png)
 
 ## Description
 The food ordering application is a mobile application developed with Kotlin that allows users to easily search and order food right on the application without having to go to the restaurant. In addition, the application also provides management functions for store managers. Restaurant managers can collect revenue statistics, manage products and users, update dish information, and process orders. This application provides a user-friendly interface and useful features for small store-to-customer purchases.
@@ -38,4 +37,13 @@ The food ordering application is a mobile application developed with Kotlin that
 | Screenshot 5                | Screenshot 6                | Screenshot 7                | Screenshot 8               |
 | ----------------------------| ----------------------------| ----------------------------| ----------------------------|
 | ![Screenshot 6](images/app_screenshot6.png) | ![Screenshot 7](images/app_screenshot7.png) | ![Screenshot 8](images/app_screenshot8.png) | ![Screenshot 10](images/app_screenshot11.png) |
+
+## End
+
+Thank you for exploring our Food Order App! I hope you find it helpful and enjoyable. If you have any questions, encounter issues, or want to contribute to the project, please feel free to reach out to us.
+
+- [Author Name](mailto:lvchuong.work@gmail.com) - Author and Developer
+- [GitHub Repository](https://github.com/van-chuong?tab=repositories) - Find the project on my GitHub.
+
+I appreciate your interest and support in making this app better.
 
