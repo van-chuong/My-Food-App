@@ -42,8 +42,8 @@ The food ordering application is a mobile application developed with Kotlin that
 
 Thank you for exploring our Food Order App! I hope you find it helpful and enjoyable. If you have any questions, encounter issues, or want to contribute to the project, please feel free to reach out to us.
 
-- [Author Name](mailto:lvchuong.work@gmail.com) - Author and Developer
-- [GitHub Repository](https://github.com/van-chuong?tab=repositories) - Find the project on my GitHub.
+- [Van Chuong](mailto:lvchuong.work@gmail.com) - Author and Developer
+- [My GitHub Repository](https://github.com/van-chuong?tab=repositories) - Find the project on my GitHub.
 
 I appreciate your interest and support in making this app better.
 
